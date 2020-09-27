@@ -1,13 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Велосипеды</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <h1 class="visually-hidden">Магазин Велосипедов</h1>
+
+  <!-- include svg sprite -->
+  <div style="display:none">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+
+  <header class="header">
+    <nav class="header__navigation">
+      <ul class="header__navigation-list">
+        <li class="header__navigation-item">
+          <a href="#">
+            О нас
+          </a>
+          <svg width="25" height="25">
+            <use xlink:href="#icon-arrow"></use>
+          </svg>
+        </li>
+        <li class="header__navigation-item">
+          <a href="#">
+            Виды велосипедов
+          </a>
+          <svg width="25" height="25">
+            <use xlink:href="#icon-arrow"></use>
+          </svg>
+        </li>
+        <li class="header__navigation-item">
+          <a href="#">
+            Видео про велосипеды
+          </a>
+          <svg width="25" height="25">
+            <use xlink:href="#icon-arrow"></use>
+          </svg>
+        </li>
+        <li class="header__navigation-item">
+          <a href="#">
+            Контакты
+          </a>
+          <svg width="25" height="25">
+            <use xlink:href="#icon-arrow"></use>
+          </svg>
+        </li>
+      </ul>
+    </nav>
+    <button type="button" class="header__menu-btn">
+      <span class="visually-hidden">Открыть меню</span>
+      <svg width="30" height="30">
+        <use xlink:href="#icon-menu-btn"></use>
+      </svg>
+    </button>
+
+    <div class="header__inner">
+      <a class="header__logo">
+        <svg width="68" height="21" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.3636 0V20.0455H10.0705V5.82273L8.97273 7.20682L6.825 9.975L6.72954 10.0705L6.58636 9.975L4.43864 7.20682L3.34091 5.775V20.0455H0V0H3.34091L6.72954 4.29545L10.0705 0H13.3636Z" fill="#0AD9C6"/>
+          <path d="M8.30444 10.0705L8.20898 9.97501L8.30444 10.0705Z" fill="#0AD9C6"/>
+          <path d="M8.44787 9.97501L8.35241 10.0705H8.30469L8.44787 9.97501Z" fill="#0AD9C6"/>
+          <path d="M38.209 5.61453L29.082 12.316L31.1952 15.194L40.3222 8.49252L38.209 5.61453Z" fill="#0AD9C6"/>
+          <path d="M26.6672 3C22.8032 3 19.624 6.13028 19.624 10.0431C19.624 13.9071 22.7543 17.0863 26.6672 17.0863C30.5311 17.0863 33.7103 13.956 33.7103 10.0431C33.7103 6.17919 30.5311 3 26.6672 3ZM26.6672 13.2712C24.8575 13.2712 23.4391 11.8039 23.4391 10.0431C23.4391 8.23344 24.9064 6.81503 26.6672 6.81503C28.4279 6.81503 29.8953 8.28235 29.8953 10.0431C29.8953 11.8039 28.4279 13.2712 26.6672 13.2712Z" fill="#0AD9C6"/>
+          <path d="M43.6393 3C39.7754 3 36.5962 6.13028 36.5962 10.0431C36.5962 13.9071 39.7265 17.0863 43.6393 17.0863C47.5033 17.0863 50.6825 13.956 50.6825 10.0431C50.6336 6.17919 47.5033 3 43.6393 3ZM43.6393 13.2712C41.8296 13.2712 40.4112 11.8039 40.4112 10.0431C40.4112 8.23344 41.8785 6.81503 43.6393 6.81503C45.4001 6.81503 46.8674 8.28235 46.8674 10.0431C46.8674 11.8039 45.4001 13.2712 43.6393 13.2712Z" fill="#0AD9C6"/>
+          <path d="M67.5977 0.238647V20.2841H64.2568V9.87956L61.4409 7.20683L59.3409 5.15456V20.2841H56V0.238647H59.2932H59.3409L63.2545 4.0091L64.2568 4.96365V0.238647H67.5977Z" fill="#0AD9C6"/>
+          <rect x="37" y="3" width="6" height="4" fill="#0AD9C6"/>
+          </svg>
+      </a>
+      <h2>Мы продаем велосипеды</h2>
+      <p>Наш Магазин отбирает только самые лучшие велосипеды для продажи</p>
+    </div>
+  </header>
+
+  <main>
+    <form action="index.html" class="feedback">
+      <p>Заполните поля ниже и мы<br> подберем велосипед Вашей мечты</p>
+
+      <label for="user-name" class="visually-hidden">Ваше имя</label>
+      <input type="text" name="userName" id="user-name" placeholder="Введите Ваше Имя">
+
+      <label for="user-tel" class="visually-hidden">Ваш номер телефона</label>
+      <input type="tel" name="userTel" id="user-tel" placeholder="Введите Ваш номер телефона">
+
+      <button type="submit">Подобрать велосипед мечты</button>
+    </form>
+  </main>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

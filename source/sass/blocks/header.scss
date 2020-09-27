@@ -1,0 +1,258 @@
+.header {
+  @include font-size(17px, 28px);
+  position: relative;
+
+  min-height: 825px;
+  padding-bottom: 1px;
+
+  background-color: $black;
+  background-image: url("../../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.header__menu-btn {
+  display: none;
+}
+
+.header__navigation {
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 21px;
+
+  max-width: 870px;
+  min-height: 60px;
+  margin: 0 auto;
+
+  border-bottom: 1px solid $white-transp;
+}
+
+.header__navigation-list {
+  @include clear-list;
+  @include font-size(16px, 32px);
+  color: $white;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+
+  padding-top: 28px;
+}
+
+.header__navigation-item a {
+  color: $white;
+  text-decoration: none;
+  letter-spacing: -0.005em;
+  opacity: 0.7;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+}
+
+.header__navigation-item svg {
+  display: none;
+}
+
+.header__inner {
+  @include font-size(20px, 32px);
+  color: $white;
+  letter-spacing: -0.005em;
+
+  max-width: 882px;
+  margin: 255px auto 0;
+}
+
+.header__inner h2 {
+  @include font-size(46px, 64px);
+  letter-spacing: 1px;
+  max-width: 350px;
+  margin-top: 20px;
+  margin-bottom: 26px;
+}
+
+.header__inner p {
+  max-width: 350px;
+  opacity: 0.8;
+}
+
+@media (min-resolution: $retina-dpi) and (min-resolution: $retina-dppx) {
+  .header {
+    background-image: url("../../img/header-bg@2x.jpg");
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .header {
+    min-height: 340px;
+    padding-top: 1px;
+
+    background-image: url("../../img/header-bg-tablet.jpg");
+  }
+
+  .header__navigation {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: unset;
+    z-index: 1;
+
+    background-color: $white;
+    box-shadow: 0 10px 6px 0 rgba(0, 0, 0, 0.11);
+
+    &--opened {
+      display: block;
+    }
+  }
+
+  .header__menu-btn {
+    display: block;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: $turquoise;
+  }
+
+  .header__navigation--opened + .header__menu-btn {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+
+    &::after,
+    &::before {
+      content: "";
+      width: 35px;
+      height: 1px;
+      display: block;
+
+      background-color: $dark-grey;
+      opacity: 0.2;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    & svg {
+      display: none;
+    }
+  }
+
+  .header__navigation-list {
+    display: block;
+    min-height: 570px;
+
+    padding-top: 100px;
+  }
+
+  .header__navigation-item {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: $grey;
+  }
+
+  .header__navigation-item a {
+    @include font-size(20px, 140%);
+    color: $text;
+  }
+
+  .header__navigation-item svg {
+    display: block;
+  }
+
+  .header__inner {
+    display: block;
+    max-width: 420px;
+    margin: 0 auto;
+    margin-top: 134px;
+  }
+
+  .header__image {
+    height: auto;
+  }
+
+  .header__logo {
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    z-index: 2;
+  }
+
+  .header__inner h2 {
+    @include font-size(30px, 42px);
+    letter-spacing: 0.5px;
+    max-width: unset;
+    padding-left: 11px;
+    margin-bottom: 20px;
+  }
+
+  .header__inner p {
+    @include font-size(18px, 32px);
+    letter-spacing: -0.005em;
+    text-align: center;
+    opacity: 0.5;
+    max-width: unset;
+  }
+
+  @media (min-resolution: $retina-dpi) and (min-resolution: $retina-dppx) {
+    .header {
+      background-image: url("../../img/header-bg-tablet@2x.jpg");
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .header {
+    min-height: 390px;
+    background-image: url("../../img/header-bg-mobile.jpg");
+  }
+
+  .header__inner {
+    margin-top: 120px;
+  }
+
+  .header__inner h2 {
+    @include font-size(30px, 42px);
+    text-align: center;
+    margin-bottom: 10px;
+    padding-left: unset;
+  }
+
+  .header__inner p {
+    @include font-size(18px, 32px);
+    font-weight: 300;
+    text-align: center;
+    padding: 0 28px;
+  }
+
+  @media (min-resolution: $retina-dpi) and (min-resolution: $retina-dppx) {
+    .header {
+      background-image: url("../../img/header-bg-mobile@2x.jpg");
+    }
+  }
+}

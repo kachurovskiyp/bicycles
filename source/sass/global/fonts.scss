@@ -10,8 +10,8 @@
 @font-face {
   font-family: "OpenSans";
   src:
-    url("../../fonts/fonts/OpenSans-Regular.woff2") format("woff2"),
-    url("../../fonts/fonts/OpenSans-Regular.woff") format("woff");
+    url("../../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -19,8 +19,13 @@
 @font-face {
   font-family: "OpenSans";
   src:
-    url("../../fonts/fonts/OpenSans-SemiBold.woff2") format("woff2"),
-    url("../../fonts/fonts/OpenSans-SemiBold.woff") format("woff");
+    url("../../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../../fonts/OpenSans-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
+}
+
+body {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-weight: 300;
 }

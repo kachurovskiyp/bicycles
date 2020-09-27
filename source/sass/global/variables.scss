@@ -1,8 +1,19 @@
-$corner-radius: 15px;
+$corner-radius: 5px;
 
 $desktop-width: 1024px;
-$tablet-width: 768px;
+$tablet-width: 767px;
 $mobile-width: 320px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
 
 /* --- colors --- */
 
+$white: #ffffff;
+$white-transp: rgba(255, 255, 255, 0.2);
+$light-grey: #c9ccd4;
+$grey: #f6f6f6;
+$dark-grey: #1c1c1c;
+$black: #000000;
+$turquoise: #0ad9c6;
+$text: #48494d;
