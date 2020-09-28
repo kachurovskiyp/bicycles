@@ -1,0 +1,138 @@
+.types {
+  background-color: $grey-bg;
+  padding: 150px 0;
+}
+
+.types h2 {
+  @include font-size(30px, 30px);
+  font-weight: 600;
+  text-align: center;
+}
+
+.types__wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.types__list {
+  @include clear-list;
+  @include font-size(22px, 34px);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tipes__item img {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.tipes__item {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  margin-right: 50px;
+  position: relative;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &--circle-under {
+    &::after {
+      content: "";
+      width: 100px;
+      height: 110px;
+      border: 27px solid $turquoise;
+      border-radius: 50%;
+
+      position: absolute;
+      top: 180px;
+      left: -60px;
+      z-index: 1;
+    }
+  }
+
+  &--squares {
+    padding-top: 30px;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 47px;
+      height: 47px;
+      border: 10px solid $turquoise;
+
+      position: absolute;
+      top: 7px;
+      left: -23px;
+      z-index: 3;
+    }
+
+    &::after {
+      top: unset;
+      left: unset;
+      bottom: 50px;
+      right: -23px;
+    }
+  }
+
+  &--circle-upper {
+    &::after {
+      content: "";
+      width: 60px;
+      height: 60px;
+      border: 18px solid $turquoise;
+      border-radius: 50%;
+
+      position: absolute;
+      top: -35px;
+      right: -35px;
+      z-index: 3;
+    }
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .tipes {
+    padding: 50px 0;
+  }
+
+  .tipes__item img {
+    width: 270px;
+    height: 300px;
+  }
+
+  .tipes__item {
+    margin-bottom: 20px;
+
+    &--squares {
+      padding: 0;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .types__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tipes__item {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+}

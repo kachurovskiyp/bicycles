@@ -1,0 +1,62 @@
+.facts {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 115px 0;
+}
+
+.facts h2 {
+  @include font-size(30px, 30px);
+  font-weight: 600;
+  text-align: center;
+}
+
+.facts__list {
+  @include clear-list;
+  margin-top: 50px;
+  counter-reset: item;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.facts__list li {
+  @include font-size(22px, 34px);
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  text-align: center;
+
+  max-width: 250px;
+  margin-bottom: 30px;
+
+  counter-increment: item;
+
+  &::before {
+    @include font-size(28px, 38px);
+    content: "0" counter(item);
+    color: $turquoise;
+    font-weight: 600;
+    letter-spacing: -1.27px;
+    text-align: center;
+
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .facts {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .facts h2 {
+    @include font-size(24px, 41px);
+  }
+
+  .facts__list {
+    flex-direction: column;
+  }
+}

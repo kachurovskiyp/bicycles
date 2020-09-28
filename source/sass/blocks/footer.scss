@@ -23,20 +23,33 @@
   margin: 40px 0;
 }
 
+.footer__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer__mail,
 .footer__tel {
   @include font-size(16px, 22px);
   text-decoration: none;
   font-weight: 400;
   color: $black-transp-two;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__mail svg,
+.footer__tel svg {
+  fill: transparent;
+  margin-right: 15px;
 }
 
 .footer__mail {
   margin-right: 90px;
-}
-
-.footer__tel svg {
-  fill: transparent;
 }
 
 @media (max-width: $desktop-width) {
@@ -70,6 +83,5 @@
   .footer__mail {
     margin-right: 0;
     margin-bottom: 20px;
-    display: block;
   }
 }
