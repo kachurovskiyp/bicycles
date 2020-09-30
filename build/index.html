@@ -129,7 +129,7 @@
               <source media="(min-resolution: 144dpi)" srcset="img/croad2x.webp" type="image/webp">
               <source srcset="img/road.webp" type="image/webp">
                 <!-- 1x: 342px, 2x: 684px -->
-              <img srcset="img/road-tablet.jpg 270w" sizes="(max-width: 1024px) 300px" src="road.jpg" width="342" height="566" alt="Горный велосипед">
+              <img srcset="img/road-tablet.jpg 270w" sizes="(max-width: 1024px) 300px" src="road.jpg" width="342" height="503" alt="Горный велосипед">
             </picture>
           </li>
 
@@ -151,10 +151,31 @@
               <source media="(min-resolution: 144dpi)" srcset="img/children@2x.webp" type="image/webp">
               <source srcset="img/children.webp" type="image/webp">
                 <!-- 1x: 342px, 2x: 684px -->
-              <img srcset="img/children-tablet.jpg 270w" sizes="(max-width: 1024px) 300px" src="children.jpg" width="342" height="566" alt="Горный велосипед">
+              <img srcset="img/children-tablet.jpg 270w" sizes="(max-width: 1024px) 300px" src="children.jpg" width="342" height="512" alt="Горный велосипед">
             </picture>
           </li>
         </ul>
+      </div>
+    </section>
+    <section class="video">
+      <div class="video__inner">
+        <h2>Видео про велосипеды</h2>
+        <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <div class="video__player">
+          <picture>
+            <source media="(max-width: 768px)" srcset="img/video-mobile.webp, img/video-mobile@2x.webp 2x" type="image/webp">
+            <source media="(min-resolution: 144dpi)" srcset="img/video@2x.webp" type="image/webp">
+            <source srcset="img/video.webp" type="image/webp">
+              <!-- 1x: 342px, 2x: 684px -->
+            <img srcset="img/video-mobile.jpg 270w" sizes="(max-width: 768px) 300px" src="video.jpg" width="929" height="522" alt="Кадр из видео про велосипеды">
+          </picture>
+          <button type="button" class="video__play">
+            <span class="visually-hidden">Проиграть видео</span>
+            <svg width="65" height="65">
+              <use xlink:href="#icon-play-btn"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   </main>

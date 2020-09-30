@@ -1,13 +1,14 @@
 .facts {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 115px 0;
+  padding: 125px 0 125px 15px;
 }
 
 .facts h2 {
   @include font-size(30px, 30px);
   font-weight: 600;
   text-align: center;
+  margin-left: 20px;
 }
 
 .facts__list {
@@ -41,22 +42,54 @@
     text-align: center;
 
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 }
 
 @media (max-width: $desktop-width) {
   .facts {
-    max-width: 650px;
+    max-width: 540px;
+    padding: 52px 0 23px;
+  }
+
+  .facts h2 {
+    @include font-size(24px, 41px);
+    margin-left: 0;
+  }
+
+  .facts__list {
+    margin-top: 30px;
+  }
+
+  .facts__list li {
+    margin-bottom: 45px;
   }
 }
 
 @media (max-width: $tablet-width) {
-  .facts h2 {
-    @include font-size(24px, 41px);
-  }
-
   .facts__list {
     flex-direction: column;
+  }
+
+  .facts__list li {
+    @include font-size(18px, 34px);
+    margin-bottom: 34px;
+    max-width: 270px;
+
+    &::before {
+      margin-bottom: 12px;
+    }
+
+    &:nth-child(2n) {
+      margin-bottom: 60px;
+    }
+
+    &:nth-child(3n) {
+      margin-bottom: 60px;
+    }
+
+    &:nth-child(2n)::before {
+      margin-bottom: 5px;
+    }
   }
 }

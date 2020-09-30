@@ -3,7 +3,7 @@
 
   position: absolute;
   top: 308px;
-  right: 277px;
+  right: 260px;
 }
 
 .feedback p {
@@ -60,12 +60,13 @@
 @media (max-width: $desktop-width) {
   .feedback {
     position: static;
-    margin: 0 auto;
-    margin-top: 100px;
+    margin: 70px auto 0;
   }
 
   .feedback p {
+    font-size: 18px;
     color: $black;
+    margin-bottom: 27px;
   }
 
   .feedback br {
@@ -84,6 +85,7 @@
   }
 
   .feedback p {
-    letter-spacing: 0.5px;
+    letter-spacing: -0.2px;
+    margin-bottom: 19px;
   }
 }
