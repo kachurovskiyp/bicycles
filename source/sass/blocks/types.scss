@@ -48,7 +48,7 @@
   position: relative;
 
   &:nth-child(3n) {
-    margin-right: 30px;
+    margin-right: 0;
   }
 
   &--circle-under {
@@ -134,6 +134,10 @@
 
   .types__item {
     margin-bottom: 20px;
+
+    &:nth-child(3n) {
+      margin-right: 30px;
+    }
 
     &--circle-under {
       &::after {
