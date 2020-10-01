@@ -108,8 +108,14 @@
     height: 250px;
   }
 
+  .footer__mail, 
+  .footer__tel {
+    display: block;
+    min-width: 300px;
+  }
+
   .footer__mail {
-    margin-right: -20px;
     margin-bottom: 20px;
+    margin-right: unset;
   }
 }

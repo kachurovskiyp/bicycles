@@ -1,6 +1,6 @@
 .types {
   background-color: $grey-bg;
-  padding: 122px 0 124px;
+  padding: 122px 5px 124px;
   overflow: hidden;
 }
 
@@ -33,13 +33,13 @@
   align-items: flex-start;
 }
 
-.tipes__item img {
+.types__item img {
   display: block;
   position: relative;
   z-index: 2;
 }
 
-.tipes__item {
+.types__item {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -48,7 +48,7 @@
   position: relative;
 
   &:nth-child(3n) {
-    margin-right: 0;
+    margin-right: 30px;
   }
 
   &--circle-under {
@@ -107,14 +107,14 @@
   }
 }
 
-.tipes__item p {
+.types__item p {
   position: relative;
   z-index: 2;
 }
 
 @media (max-width: $desktop-width) {
   .types {
-    padding: 30px 0;
+    padding: 30px 5px 30px;
   }
 
   .types h2 {
@@ -127,12 +127,12 @@
     padding-left: 25px;
   }
 
-  .tipes__item img {
+  .types__item img {
     width: 270px;
     height: 300px;
   }
 
-  .tipes__item {
+  .types__item {
     margin-bottom: 20px;
 
     &--circle-under {
@@ -178,7 +178,7 @@
     padding: 0;
   }
 
-  .tipes__item {
+  .types__item {
     margin: 0;
     margin-bottom: 17px;
 
