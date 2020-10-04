@@ -3,7 +3,7 @@
 
   position: absolute;
   top: 308px;
-  right: 260px;
+  right: 18.5%;
 }
 
 .feedback p {
@@ -31,7 +31,7 @@
   border-radius: $corner-radius;
 
   &::placeholder {
-    @include font-size(15px, 24px);
+    @include font-size(15px, 44px);
     color: $dark-grey;
     opacity: 0.5;
   }

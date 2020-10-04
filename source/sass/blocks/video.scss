@@ -54,9 +54,16 @@
   cursor: pointer;
 }
 
+.video__play svg{
+  &:hover {
+    stroke-width: 1px;
+    stroke: $white;
+  }
+}
+
 @media (max-width: $desktop-width) {
   .video {
-    padding-top: 52px;
+    padding-top: 47px;
   }
 
   .video p {
