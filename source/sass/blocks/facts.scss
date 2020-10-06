@@ -72,6 +72,10 @@
 }
 
 @media (max-width: $tablet-width) {
+  .facts {
+    margin-bottom: 60px;
+  }
+
   .facts__list {
     flex-direction: column;
   }

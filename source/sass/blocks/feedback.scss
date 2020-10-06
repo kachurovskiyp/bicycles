@@ -75,6 +75,10 @@
 }
 
 @media (max-width: $tablet-width) {
+  .feedback input {
+    line-height: 50px;
+  }
+
   .feedback br {
     display: none;
   }
